@@ -10,7 +10,7 @@ class Database {
     public $mysqli;
 
     function __construct() {
-        // Buat koneksi ke MySQL (tanpa database dulu)
+       
         $this->mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS);
 
         // Cek dan buat database jika belum ada
