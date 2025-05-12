@@ -4,7 +4,7 @@ require_once 'Database.php';
 $db = new Database();
 $conn = $db->mysqli;
 
-// Cek & buat tabel
+
 $conn->query("CREATE TABLE IF NOT EXISTS film (
     id INT AUTO_INCREMENT PRIMARY KEY,
     judul VARCHAR(100),
@@ -12,7 +12,7 @@ $conn->query("CREATE TABLE IF NOT EXISTS film (
     tahun INT
 )");
 
-// Isi data jika masih kosong
+
 $result = $conn->query("SELECT COUNT(*) as total FROM film");
 $row = $result->fetch_assoc();
 if ($row['total'] == 0) {
